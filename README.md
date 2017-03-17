@@ -1,4 +1,4 @@
-##Installation
+## Installation
 It is build using python on Lasagne-Theano for deep learning and Librosa for feature extraction.
 
 Requires installing Lasagne-Theano (http://lasagne.readthedocs.org/en/latest/user/installation.html) and Librosa (https://github.com/librosa/librosa). For further details in how we are using Lasagne-Theano, see this tutorial: http://lasagne.readthedocs.org/en/latest/user/tutorial.html.
@@ -8,16 +8,16 @@ Lasagne is already in a /src folder, to install Theano do:
 
 Dependencies: pandas, numpy and scipy.
 
-##Folders structure
-It has the following root folders:
+## Folders structure
+Root folders:
 - `./data`: with audio, groundtruth and all intermediate files (spectrograms, patches and train/test results).
 - `./src`: with core and static scripts.
 
-And these are the default data folders:
+Default data folders:
 - `./data/audio/`: with the raw audio files.
 - `./data/index/`: with pre-processed *(i)* 'index_file' and *(ii)* 'gt_file'.
 
-When running the scripts in the pipeline, the following folders will be created in cronological order in common.DATA_FOLDER:
+When running the scripts throughout the pipeline, the following folders will be created:
 - `./data/spectrograms/`
 - `./data/exp_setup/`
 - `./data/patches/`
@@ -28,12 +28,12 @@ When running the scripts in the pipeline, the following folders will be created 
 `spectrograms.py` > `exp_setup.py` > `patches.py` > `train.py` > `test.py`
 - `spectrograms.py`: computes spectrograms.
 - `exp_setup.py`: splits data in train, val, test. Requires: previous run of 'spectrograms.py'.
-- `patches.py`: computes the patches and normalizes the data. Requires: previous run of 'exp_setup.py'.
+- `patches.py`: computes patches and normalizes the data. Requires: previous run of 'exp_setup.py'.
 - `train.py`: trains a deep learning model defined in 'builid_architecture.py'. Requires: previous run of 'patches.py'.
 - `test.py`: evaluates how the trained model performs. Requires: previous run of 'train.py'.
 
-##Steps for reproducting the experiment results
-- Download the dataset:
+## Steps for reproducting the experiment results
+- Download the dataset. See: http://mirg.city.ac.uk/codeapps/the-magnatagatune-dataset and https://github.com/keunwoochoi/magnatagatune-list 
 - Copy the MTT datset to `./data/audio/MagnaTagATune/` in its original format: 16 folders, '0' to '9' and then 'a' to 'f'. It will look like: `./data/audio/MagnaTagATune/a/`, `./data/audio/MagnaTagATune/2/`, etc.
 - Run 'spectrograms.py'. 
 - Run 'exp_setup.py'. 
@@ -42,6 +42,3 @@ When running the scripts in the pipeline, the following folders will be created 
 - Run 'train.py'. If you want to use your GPU, you probably want to run the following: THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python test_2.py
 - Configure 'test.py': set `test_params['model_name']` to be the model created by 'train.py', ie: 'dieleman_setup_eusipco2017_proposed2_v0_210270563616880246637098465086143809559' - without the extension. 
 - Run 'test.py'.
-
-##Authors
-- Jordi Pons and Sergio Oramas.
