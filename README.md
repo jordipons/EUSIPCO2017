@@ -27,7 +27,7 @@ Dependencies: pandas, numpy and scipy.
 9. Configure `test.py`: set test_params['model_name'] to be the model created by `train.py`, ie: `dieleman_setup_eusipco2017_proposed2_v0_210270563616880246637098465086143809559` - without the extension. 
 10. Run `python test.py`.
 
-# Folders structure
+### Folders structure
 Root folders:
 - `./data`: with audio, groundtruth and all intermediate files (spectrograms, patches and train/test results).
 - `./src`: with core and static scripts.
@@ -43,7 +43,7 @@ When running the scripts throughout the pipeline, the following folders will be 
 - `./data/train/`
 - `./data/test/`
 
-# Scipts pipeline
+### Scipts pipeline
 `spectrograms.py` > `exp_setup.py` > `patches.py` > `train.py` > `test.py`
 - `spectrograms.py`: computes spectrograms.
 - `exp_setup.py`: splits data in train, val, test. Requires: previous run of 'spectrograms.py'.
