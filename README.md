@@ -1,7 +1,7 @@
 ## Installation
 Python scripts based on Lasagne-Theano for deep learning and Librosa for feature extraction.
 
-Requires installing Lasagne-Theano (http://lasagne.readthedocs.org/en/latest/user/installation.html) and Librosa (https://github.com/librosa/librosa). For further details in how we are using Lasagne-Theano, see this tutorial: http://lasagne.readthedocs.org/en/latest/user/tutorial.html.
+Requires installing Lasagne-Theano (http://lasagne.readthedocs.org/en/latest/user/installation.html) and Librosa (https://github.com/librosa/librosa). 
 
 Lasagne is already in a /src folder, to install Theano do:
 > sudo pip install --upgrade https://github.com/Theano/Theano/archive/master.zip
