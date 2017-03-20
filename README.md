@@ -30,6 +30,14 @@ Dependencies: pandas, numpy and scipy.
 ## Additional information
 You might want to use this code for your own porpuses. If this is the case, the following additional information might be useful for you.
 
+### Scipts pipeline
+`spectrograms.py` > `exp_setup.py` > `patches.py` > `train.py` > `test.py`
+- `spectrograms.py`: computes spectrograms.
+- `exp_setup.py`: splits data in train, val, test. Requires: previous run of 'spectrograms.py'.
+- `patches.py`: computes patches and normalizes the data. Requires: previous run of 'exp_setup.py'.
+- `train.py`: trains a deep learning model defined in 'builid_architecture.py'. Requires: previous run of 'patches.py'.
+- `test.py`: evaluates how the trained model performs. Requires: previous run of 'train.py'.
+
 ### Folders structure
 Root folders:
 - `./data`: with audio, groundtruth and all intermediate files (spectrograms, patches and train/test results).
@@ -45,11 +53,3 @@ When running the scripts throughout the pipeline, the following folders will be 
 - `./data/patches/`
 - `./data/train/`
 - `./data/test/`
-
-### Scipts pipeline
-`spectrograms.py` > `exp_setup.py` > `patches.py` > `train.py` > `test.py`
-- `spectrograms.py`: computes spectrograms.
-- `exp_setup.py`: splits data in train, val, test. Requires: previous run of 'spectrograms.py'.
-- `patches.py`: computes patches and normalizes the data. Requires: previous run of 'exp_setup.py'.
-- `train.py`: trains a deep learning model defined in 'builid_architecture.py'. Requires: previous run of 'patches.py'.
-- `test.py`: evaluates how the trained model performs. Requires: previous run of 'train.py'.
