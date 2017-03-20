@@ -1,5 +1,5 @@
 ## Installation
-It is build using python on Lasagne-Theano for deep learning and Librosa for feature extraction.
+Python scripts based on Lasagne-Theano for deep learning and Librosa for feature extraction.
 
 Requires installing Lasagne-Theano (http://lasagne.readthedocs.org/en/latest/user/installation.html) and Librosa (https://github.com/librosa/librosa). For further details in how we are using Lasagne-Theano, see this tutorial: http://lasagne.readthedocs.org/en/latest/user/tutorial.html.
 
