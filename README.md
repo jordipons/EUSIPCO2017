@@ -27,6 +27,9 @@ Dependencies: pandas, numpy and scipy.
 9. Configure `test.py`: set test_params['model_name'] to be the model created by `train.py`, ie: `dieleman_setup_eusipco2017_proposed2_v0_210270563616880246637098465086143809559` - without the extension. 
 10. Run `python test.py`.
 
+## Additional information
+You might want to use this code for your own porpuses. If this is the case, the following additional information might be useful for you.
+
 ### Folders structure
 Root folders:
 - `./data`: with audio, groundtruth and all intermediate files (spectrograms, patches and train/test results).
