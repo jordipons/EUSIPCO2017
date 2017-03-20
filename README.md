@@ -1,4 +1,4 @@
-Music auto-tagging experiments for the paper entitled "Timbre Analysis of Music Audio Signals with Convolutional Neural Networks".
+Music auto-tagging experiments for the paper entitled "Timbre Analysis of Music Audio Signals with Convolutional Neural Networks" by Jordi Pons, Olga Slizovskaia, Rong Gong, Emilia Gómez and Xavier Serra.
 
 We provide the code for data preprocessing, training and evaluation of our approach.
 
