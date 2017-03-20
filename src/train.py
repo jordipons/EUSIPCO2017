@@ -27,13 +27,13 @@ NOT deterministic experiment: if random initialization.
 """
 config = {
 	'train_code_version': 'v0',
-    'patches' : 'patches/patches_dieleman_setup_eusipco2017_187_logC_elementWise_memory_1489758649/', # end it with / !!!
+    'patches' : 'patches/patches_dieleman_setup_eusipco2017_187_logC_elementWise_memory_1489997707/', # end it with / !!!
     'random_seed' : 0, # 0 to disable.
     'saveAllModels' : False,
 
     'type' : 'proposed2', #'smallSquared' or 'proposed' or 'proposed2'
-    'num_epochs' : 2,
-    'batchSize' : 2,
+    'num_epochs' : 200,
+    'batchSize' : 10,
     'optimization' : 'schedule', #'schedule' or 'adam'
     'initialize_model' : 'random', # 'random' or model path.
     'lr' : 0.1, # if 'schedule', otherwise useless.
